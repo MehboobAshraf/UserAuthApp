@@ -22,6 +22,7 @@ export class RegisterPage implements OnInit {
     });
   }
 
+  // User Registration method
   register() {
     this.userService.regsiterUser(this.registerForm.value).subscribe(response => {
       if(response){
@@ -32,6 +33,7 @@ export class RegisterPage implements OnInit {
     })
   }
 
+  // modal popup for signup success
   async presentAlert() {
     const alert = await this.alertController.create({
       header: 'Registration Succesfull',

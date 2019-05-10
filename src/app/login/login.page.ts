@@ -21,6 +21,7 @@ export class LoginPage implements OnInit {
     });
   }
   
+  // login method
   login() {
     this.userService.login(this.loginForm.value).subscribe(response => {
       if(response.token){
@@ -31,6 +32,7 @@ export class LoginPage implements OnInit {
     })
   }
 
+  //modal popup for login success
   async presentAlert() {
     const alert = await this.alertController.create({
       header: 'Login succesfull',
